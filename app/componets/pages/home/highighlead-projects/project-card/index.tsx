@@ -1,5 +1,7 @@
+import { Link } from "@/app/componets/link"
 import { Techbage } from "@/app/componets/tech-badge"
 import Image from "next/image"
+import { HiArrowNarrowRight } from "react-icons/hi"
 
 export const Projectcard = () =>{
   return(
@@ -10,7 +12,7 @@ export const Projectcard = () =>{
         width={420}
         height={304}
         alt="foto do projeto"
-        className="object-cover rounded-lg "/>
+        className="w-full h-[200px] sm:h-[300px] lg:w-[420px] lg:min-h-full object-cover rounded-lg "/>
 
       </div>
 
@@ -38,6 +40,11 @@ export const Projectcard = () =>{
           <Techbage name="Next.js"/>
           <Techbage name="React"/>
         </div>
+        <Link
+        href='/projects/book-wise' 
+        >Ver projetos
+        <HiArrowNarrowRight/></Link>
+       
       </div>
     </div>
   )
