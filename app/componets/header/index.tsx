@@ -28,8 +28,8 @@ export const Header = () => {
        </Link>
 
        <nav className="flex items-center gap-4 sm:gap-10">
-        {NAV_ITEMS.map(item => (
-          <NavItem {...item}/>
+        {NAV_ITEMS.map((item, index) => (
+          <NavItem key={index} {...item} />
         ))}
        </nav>
       </div>
