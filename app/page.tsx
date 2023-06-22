@@ -9,6 +9,7 @@ import { fetchHygraphQuery } from "./componets/ultis/fetch-hygraph-query";
 import { HomePageData } from "./types/pages-info";
 
 
+
 export const metadata = {
   title: 'Home'
 }

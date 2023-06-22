@@ -8,7 +8,12 @@ const inter = Inter({
   variable: '--font-inter',
   subsets: ['latin'],
 })
-
+export const metadata = {
+  title: {
+    default: 'Home',
+    template: '%s | EM Dev'
+  }
+}
 const plexMono = IBM_Plex_Mono({
   variable: '--font-plex-mono',
   subsets: ['latin'],
