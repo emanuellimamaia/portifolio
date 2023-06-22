@@ -22,7 +22,6 @@ export const ContactForm = () =>{
   })
 
   const onSubmit = (data: ContactFormData) =>{
-    console.log(data)
   }
   return(
     <section className="py-16 px-6 md:py-32 flex items-center justify-center bg-gray-950"> 

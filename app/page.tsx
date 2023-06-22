@@ -56,8 +56,10 @@ return fetchHygraphQuery (
 }
 
 export default async function Home() {
-  const { page: pageData } = await getPageData ();
-  console.log(pageData)
+  const data = await getPageData();
+
+  const pageData = data?.page;
+
   return (
     <>
     
