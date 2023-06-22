@@ -1,8 +1,12 @@
+'use client'
 import { Button } from "@/app/componets/button"
 import { Techbage } from "@/app/componets/tech-badge"
+import { HomePageInfo } from "@/app/types/pages-info"
+import { RichText } from "@graphcms/rich-text-react-renderer"
 import Image from "next/image"
 import { HiArrowNarrowRight } from 'react-icons/hi'
 import { TbBrandChrome, TbBrandGithub, TbBrandGmail, TbBrandLinkedin, TbBrandOnlyfans, TbBrandWhatsapp } from 'react-icons/tb'
+
 
 const MOCK_CONTACTS = [
   {
@@ -22,7 +26,18 @@ const MOCK_CONTACTS = [
     icon: <TbBrandGmail/>
   },
 ]
-export const HeroSection = () => {
+type HeroSectionProps = {
+  homeInfo: HomePageInfo
+}
+
+export const HeroSection = ({ homeInfo }: HeroSectionProps) => {
+  const handleContact = () => {
+    const contactSection = document.querySelector('#contact')
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return(
     <section className="w-full lg:h-[755px] bg-hero-image bg-cover bg-center bg-no-repeat flex flex-col justify-end pb-10 sm:pb-32 py-32  lg:pb-[110px]">
     <div className="container flex items-start justify-between flex-col-reverse lg:flex-row">
@@ -31,10 +46,12 @@ export const HeroSection = () => {
       <div className="w-full lg:max-w-[530px]">
           <p className="font-mono text-emerald-400">Olá, meu nome é </p>
           <h2 className="text-4xl font-medium mt-2">Emanuel Maia</h2>
-          <p className="text-gray-400 my-6 text-sn:text-base">Olá meu nome é Emanuel Lima Maia,
-           desde novo sempre foi um curioso da internet e um apaixonado por tecnologia. 
-           Atualmente buscando uma oportunidade no mundo da programação, sempre dedicado aos meus estudos na área e empenhado a cada dia 
-           melhorar e apreender com meus erros. </p>
+ 
+          <div className="text-gray-400 my-6 text-sn:text-base">
+
+          Olá meu nome é <strong className="text-gray-50">Emanuel Lima Maia</strong>, desde novo sempre foi um curioso da internet e um apaixonado por tecnologia.
+           Atualmente buscando uma oportunidade no mundo da programação, sempre dedicado aos meus estudos na área e empenhado a cada dia melhorar e apreender com meus erros.
+            {/* <RichText content={homeInfo.introduction.raw}/> */}  </div> 
 
 
        {/* parte que vai falar sobre minha tecnologias  */} 
@@ -49,11 +66,10 @@ export const HeroSection = () => {
 
         {/* parte para entrar em contato */}
         <div className="mt-6 lg:mt-10 flex sm:items-center sm:gap-5 flex-col sn:flex-row">
-          <Button className=" w-max shadow-button">
-            entre em contato
-            <HiArrowNarrowRight size={18}/>
-          </Button>
-
+        <Button className="w-max shadow-button" onClick={handleContact}>
+              Entre em contato
+              <HiArrowNarrowRight size={18} />
+            </Button>
           <div className="text-2xl text-gray-600 flex items-center h-20 gap-3 ">
             {MOCK_CONTACTS.map((contact, index) => (
               <a

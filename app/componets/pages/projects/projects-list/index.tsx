@@ -1,18 +1,24 @@
 import Link from "next/link"
+
+import { Project } from '@/app/types/project'
 import { PorjectCard } from "./project-card"
 
 
 
-export const ProjectsList =()=> {
-  return(
-    <section className="container py-32 grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-x-4 gap-y-6">
 
-    <Link href="/projects/book-wise">
-      <PorjectCard/>
-    </Link>
-      <PorjectCard/>
-      <PorjectCard/>
-      
+type ProjectsListProps = {
+  projects: Project[]
+}
+
+export const ProjectsList = ({ projects }: ProjectsListProps) => {
+  return (
+    <section className="container py-32 grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-x-4 gap-y-6">
+      {projects.map((project,) => (
+          <Link href={`/projects/${project.slug}`}>
+            <PorjectCard project={project} />
+          </Link>
+       
+      ))}
     </section>
   )
 }

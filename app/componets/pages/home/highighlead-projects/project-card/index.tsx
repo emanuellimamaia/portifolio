@@ -1,22 +1,27 @@
 import { Link } from "@/app/componets/link"
 import { Techbage } from "@/app/componets/tech-badge"
+import { Project } from "@/app/types/project"
 import Image from "next/image"
 import { HiArrowNarrowRight } from "react-icons/hi"
 
-export const Projectcard = () =>{
+type ProjectcardProps = {
+  project : Project
+}
+
+export const Projectcard = ({ project }: ProjectcardProps ) =>{
   return(
     <div className="flex gap-6 lg:gap-12 flex-col lg:flex-row">
-      <div className="w-full h-full">
+      <div className="w-full h-[200px] sm:h-[300px] lg:w-[420px] lg:min-h-full ">
         <Image 
-        src="/images/foto emanuel elevador.png"
+        src={project.thumbnail.url}
         width={420}
         height={304}
-        alt="foto do projeto"
-        className="w-full h-[200px] sm:h-[300px] lg:w-[420px] lg:min-h-full object-cover rounded-lg "/>
+        alt={`foto do projeto ${project.title}`}
+        className="w-full h-full object-cover rounded-lg "/>
 
       </div>
 
-      <div>
+      <div className="flex-1 lg:py-[18px]">
         <h3 className="flex items-center gap-3 font-medius text-lg text-gray-50">
           <Image
           width={20}
@@ -24,26 +29,24 @@ export const Projectcard = () =>{
           alt=""
           src="images/icons/project-title-icon.svg"
           
-          /> fala 
+          /> {project.title} 
         </h3>
 
-        <p className="text-gray-400 my-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima iusto beatae consequuntur impedit, doloribus, error aliquam incidunt laudantium quis ipsam, reprehenderit maxime totam! Odio omnis placeat tenetur ex exercitationem ab.
+        <p className="text-gray-400 my-6">
+          {project.shortDescription}
         </p>
 
         <div className="flex gap-x-2 gap-y-3 flex-wrap mb-8 lg:max-w-[350px]">
-          <Techbage name="Next.js"/>
-          <Techbage name="React"/>
-          <Techbage name="Next.js"/>
-          <Techbage name="React"/>
-          <Techbage name="Next.js"/>
-          <Techbage name="React"/>
-          <Techbage name="Next.js"/>
-          <Techbage name="React"/>
+          {project.technologies.map(tech=>(
+            <Techbage key={`${project.title}-tech-${tech.name}`}name={tech.name}
+            />
+          ))}
         </div>
         <Link
-        href='/projects/book-wise' 
-        >Ver projetos
-        <HiArrowNarrowRight/></Link>
+        href={`/projects/${project.slug}`}
+        > Ver projeto
+        <HiArrowNarrowRight/>
+        </Link>
        
       </div>
     </div>
