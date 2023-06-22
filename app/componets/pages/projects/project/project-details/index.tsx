@@ -2,7 +2,6 @@ import { Button } from "@/app/componets/button"
 import { SectionTitle } from "@/app/componets/section-title"
 import { Techbage } from "@/app/componets/tech-badge"
 import { TbBrandGithub } from "react-icons/tb"
-import { FiGlobe } from "react-icons/Fi"
 import { Link } from "@/app/componets/link"
 import { HiArrowNarrowLeft } from "react-icons/hi"
 
