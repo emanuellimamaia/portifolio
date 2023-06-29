@@ -1,4 +1,3 @@
-
 import { ProjectDetails } from "@/app/componets/pages/projects/project/project-details";
 import { fetchHygraphQuery } from "@/app/componets/ultis/fetch-hygraph-query";
 import { ProjectPageData, ProjectsPageStaticData } from "@/app/types/pages-info";
@@ -12,7 +11,7 @@ type ProjectProps = {
 
 
 
-const getProjectDetails = async (slug:string): Promise <ProjectPageData> =>{
+const getProjectDetails = async (slug: string): Promise<ProjectPageData> => {
   const query = `
   query MyQuery {
     project(where: {slug: "${slug}"}) {
@@ -42,12 +41,13 @@ const getProjectDetails = async (slug:string): Promise <ProjectPageData> =>{
   
   `
 
+
   return fetchHygraphQuery(
     query,
     60 * 60 * 24 //24 HORAS 
   )
 }
-export default async function Project ({ params:{slug} }: ProjectProps) {
+export default async function Project({ params: { slug } }: ProjectProps) {
   const data = await getProjectDetails(slug)
 
   if (!data || !data.project || !data.project.pageThumbnail) {
@@ -59,9 +59,9 @@ export default async function Project ({ params:{slug} }: ProjectProps) {
   }
 
 
-  return(
+  return (
     <>
-      <ProjectDetails project = {data.project} />
+      <ProjectDetails project={data.project} />
     </>
   )
 }
@@ -76,15 +76,15 @@ export async function generateStaticParams() {
   const { projects } = await fetchHygraphQuery<ProjectsPageStaticData>(query)
 
   return projects
-} 
+}
 
 export async function generateMetadata({
-  params: {slug}
-}:ProjectProps): Promise<Metadata> {
+  params: { slug }
+}: ProjectProps): Promise<Metadata> {
   const data = await getProjectDetails(slug)
-  const project =  data.project;
- return { 
- title: project.title,
- description:project.description.text,
- }
+  const project = data.project;
+  return {
+    title: project?.title ?? "Titulo não encontrado",
+    description: project?.description?.text ?? "Descrição não encontrada",
+  }
 } 

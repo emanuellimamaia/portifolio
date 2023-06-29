@@ -14,6 +14,14 @@ type ProjectDetailsProps = {
 
 export const ProjectDetails = ({ project }: ProjectDetailsProps) => {
 
+  if (!project.title) {
+    return (
+      <div>
+        titulo nao encontrado
+      </div>
+    )
+  }
+
   return(
       <section className="w-full sm:min-h-[750px] flex flex-col items-center justify-end relative pb-10 sm:pb-24 py-24 px-6 overflow-hidden">
        <div className="absolute inset-0 z-[-1] bg"
@@ -44,12 +52,11 @@ export const ProjectDetails = ({ project }: ProjectDetailsProps) => {
             Repositorio
           </Button>
         </a>
-       {/*  <a href="https://github.com/" target="_blank">
+        <a href={project.liveProjectUrl} target="_blank">
           <Button className="max-w-[180px]">
-            <FiGlobe size={20}/>
             Projeto Online
           </Button>
-        </a> */}
+        </a> 
       </div>
 
       <Link href="/projects">
