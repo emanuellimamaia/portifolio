@@ -1,5 +1,5 @@
 import { TbBrandCss3, TbBrandHtml5, TbBrandJavascript, TbBrandMysql, TbBrandNextjs, TbBrandNpm, TbBrandReact } from "react-icons/tb"
-import { SectionTitle } from "../../../section-title"
+import { SectionTitle } from "../../../../../section-title"
 import { KnowTech } from "./know-tech"
 
 export const KnowTechs = () => {

@@ -1,5 +1,5 @@
 import { HorizontalDivider } from "@/app/componets/divider/horizontal"
-import { SectionTitle } from "@/app/componets/section-title"
+import { SectionTitle } from "@/section-title"
 import { Projectcard } from "./project-card"
 import { Link } from "@/app/componets/link"
 import { HiArrowNarrowRight } from "react-icons/hi"

@@ -1,27 +1,40 @@
 'use client'
 import { HiArrowNarrowRight } from "react-icons/hi"
 import { Button } from "../button"
-import { SectionTitle } from "../section-title"
+import { SectionTitle } from "../../../section-title"
 import {useForm} from "react-hook-form"
 import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
+import { toast } from "react-hot-toast"
+import axios from "axios"
 
-const ContactFormSchema = z.object ({
+const contactFormSchema = z.object({
   name: z.string().min(3).max(100),
   email: z.string().email(),
   message: z.string().min(1).max(500),
-
 })
 
-type ContactFormData = z.infer<typeof ContactFormSchema>
-export const ContactForm = () =>{
 
+type ContactFormData = z.infer<typeof contactFormSchema>
 
-  const {handleSubmit, register} = useForm <ContactFormData> ({
-    resolver: zodResolver(ContactFormSchema)
+export const ContactForm = () => {
+  const {
+    handleSubmit,
+    register,
+    reset,
+    formState: { isSubmitting },
+  } = useForm<ContactFormData>({
+    resolver: zodResolver(contactFormSchema),
   })
 
-  const onSubmit = (data: ContactFormData) =>{
+  const onSubmit = async (data: ContactFormData) => {
+    try {
+      await axios.post('/api/contact', data)
+      toast.success('Mensagem enviada com sucesso!')
+      reset()
+    } catch (error) {
+      toast.error('Ocorreu um erro ao enviar a mensagem. Tente novamente.')
+    }
   }
   return(
     <section className="py-16 px-6 md:py-32 flex items-center justify-center bg-gray-950"> 

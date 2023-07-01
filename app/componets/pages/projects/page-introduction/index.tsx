@@ -1,5 +1,5 @@
 import { Link } from "@/app/componets/link"
-import { SectionTitle } from "@/app/componets/section-title"
+import { SectionTitle } from "@/section-title"
 import { HiArrowNarrowLeft } from "react-icons/hi"
 
 export const PageIntroduction = () => {
