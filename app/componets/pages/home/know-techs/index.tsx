@@ -1,4 +1,5 @@
 import { TbBrandCss3, TbBrandHtml5, TbBrandJavascript, TbBrandMysql, TbBrandNextjs, TbBrandNpm, TbBrandReact } from "react-icons/tb"
+import { SiNextdotjs } from "react-icons/si"
 import { SectionTitle } from "../../../../../section-title"
 import { KnowTech } from "./know-tech"
 
@@ -33,6 +34,12 @@ export const KnowTechs = () => {
      name:"MYSQL",
      startDate :"2023-05-01"
     }}/>
+    <KnowTech tech={{
+     icon: <SiNextdotjs/>,
+     name:"Next.js",
+     startDate :"2023-06-01"
+    }}/>
+
 
     
     </div>
