@@ -4,6 +4,7 @@ import { Techbage } from "@/app/componets/tech-badge"
 import { HomePageInfo } from "@/app/types/pages-info"
 import { RichText } from "@graphcms/rich-text-react-renderer"
 import Image from "next/image"
+import Link from "next/link"
 import { HiArrowNarrowRight } from 'react-icons/hi'
 import { TbBrandChrome, TbBrandGithub, TbBrandGmail, TbBrandLinkedin, TbBrandOnlyfans, TbBrandWhatsapp } from 'react-icons/tb'
 
@@ -66,11 +67,15 @@ export const HeroSection = ({ homeInfo }: HeroSectionProps) => {
 
         {/* parte para entrar em contato */}
         <div className="mt-6 lg:mt-10 flex sm:items-center sm:gap-5 flex-col sn:flex-row">
-        <Button className="w-max shadow-button" onClick={handleContact}>
-              Entre em contato
+          <Button className="w-max shadow-button">
+            <Link scroll href="#contact" className="flex flex-row justify-between items-center" onClick={handleContact}>
+            Entrar em contato
               <HiArrowNarrowRight size={18} />
+            </Link>
             </Button>
-          <div className="text-2xl text-gray-600 flex items-center h-20 gap-3 ">
+            
+          <div className="text-2xl text-gray-600 flex 
+          items-center h-20 gap-3 ">
             {MOCK_CONTACTS.map((contact, index) => (
               <a
               href={contact.url}
