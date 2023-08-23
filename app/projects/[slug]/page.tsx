@@ -74,7 +74,7 @@ export async function generateStaticParams() {
     }
   `
   const { projects } = await fetchHygraphQuery<ProjectsPageStaticData>(query)
-
+  console.log("Projects data:", projects);
   return projects
 }
 

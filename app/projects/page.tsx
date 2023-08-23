@@ -3,7 +3,6 @@ import { ProjectsList } from "../componets/pages/projects/projects-list";
 import { fetchHygraphQuery } from "../componets/ultis/fetch-hygraph-query";
 import { ProjectsPageData } from "../types/pages-info";
 
-
 const getPageData = async (): Promise <ProjectsPageData> =>{
   const query = ` query ProjectsQuery {
     projects {
