@@ -6,7 +6,7 @@ import { ContactForm } from "./componets/contact-form";
 import { Footer } from "./componets/footer";
 import Head from "next/head";
 <Head>
-  <link rel="shortcut icon" href="images/favicon.svg" />
+  <link rel="shortcut icon" href="/images/logo_emanuel.svg" />
 </Head>;
 
 const inter = Inter({
@@ -21,7 +21,7 @@ export const metadata = {
   },
   icons: [
     {
-      url: "/favicon.svg",
+      url: "/images/logo_emanuel.svg",
     },
   ],
 };
