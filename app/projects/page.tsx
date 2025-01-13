@@ -3,7 +3,7 @@ import { ProjectsList } from "../componets/pages/projects/projects-list";
 import { fetchHygraphQuery } from "../componets/ultis/fetch-hygraph-query";
 import { ProjectsPageData } from "../types/pages-info";
 
-const getPageData = async (): Promise <ProjectsPageData> =>{
+const getPageData = async (): Promise<ProjectsPageData> => {
   const query = ` query ProjectsQuery {
     projects {
       shortDescription
@@ -16,20 +16,20 @@ const getPageData = async (): Promise <ProjectsPageData> =>{
         name
       }
     }
-  }`
+  }`;
 
   return fetchHygraphQuery(
     query,
-    60 * 60 * 24 //24 HORAS 
-  )
-}
-export default async function Projects () {
+    60 * 60 * 24 //24 HORAS
+  );
+};
+export default async function Projects() {
   const { projects } = await getPageData();
-  return(
+  return (
     <>
-      <PageIntroduction></PageIntroduction>
-      
-      <ProjectsList projects={projects}/>
+      <PageIntroduction />
+
+      <ProjectsList projects={projects} />
     </>
-  )
+  );
 }
