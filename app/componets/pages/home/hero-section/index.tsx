@@ -98,7 +98,7 @@ export const HeroSection = () => {
             </div>
           </div>
         </div>
-        <div className="w-[50%]">
+        <div className="w-[50%] mt-10">
           <GitHubCalendar username="emanuellimamaia" colorScheme="dark" />
         </div>
       </div>
