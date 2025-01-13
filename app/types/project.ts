@@ -1,4 +1,4 @@
-import type { RichTextContent } from "@graphcms/rich-text-types";
+
 
 export type KnowTech = {
   icon: string;
@@ -6,28 +6,28 @@ export type KnowTech = {
   startDate: string;
 }
 export type ProjecSection = {
-  title:string;
+  title: string;
   image: {
-    url:string
+    url: string
   }
 }
 export type Project = {
-  slug:string
+  slug: string
   thumbnail: {
-    url:string
+    url: string
   }
-  title:string
-  shortDescription:string
+  title: string
+  shortDescription: string
   technologies: KnowTech[]
   pageThumbnail: {
-    url:string
+    url: string
   }
-  sections:ProjecSection[]
+  sections: ProjecSection[]
   description: {
-    raw:RichTextContent
-    text:string
+    raw: string
+    text: string
   }
   liveProjectUrl
   ?: string
-  gitHubUrl?:string
+  gitHubUrl?: string
 }
