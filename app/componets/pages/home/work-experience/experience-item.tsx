@@ -60,7 +60,7 @@ export const ExperienceItem = ({
         </p>
         <div className="flex gap-x-2 gap-y-3 flex-wrap lg:max-w-[350px] mb-8">
           {tecnologis.map((tec) => (
-            <Techbage name={tec} />
+            <Techbage key={tec} name={tec} />
           ))}
         </div>
       </div>

@@ -28,6 +28,7 @@ export const ContactForm = () => {
 
   const onSubmit = async (data: ContactFormData) => {
     try {
+      await axios.post("/api/contact", data);
       toast.success("Mensagem enviada com sucesso!");
       reset();
     } catch (error) {
