@@ -42,7 +42,7 @@ export const HeroSection = () => {
 
   return (
     <section className="w-full lg:h-[755px] bg-hero-image bg-cover bg-center bg-no-repeat flex flex-col justify-end pb-10 sm:pb-32 py-32  lg:pb-[110px]">
-      <div className="container flex items-start justify-between flex-col-reverse lg:flex-row">
+      <div className="container flex items-start justify-between flex-col lg:flex-row">
         {/*parte aonde vai falar de mim e */}
         <div className="w-full lg:max-w-[530px]">
           <p className="font-mono text-emerald-400">Olá, meu nome é </p>
@@ -98,7 +98,7 @@ export const HeroSection = () => {
             </div>
           </div>
         </div>
-        <div className="w-[50%] mt-10">
+        <div className="md:w-[50%] mt-10 w-[21rem]">
           <GitHubCalendar username="emanuellimamaia" colorScheme="dark" />
         </div>
       </div>
