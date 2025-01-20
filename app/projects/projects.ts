@@ -48,6 +48,6 @@ export const projectsData: Project[] = [
       text: "",
     },
     gitHubUrl: "https://github.com/emanuellimamaia/fulog-front",
-    liveProjectUrl: "" /* link do projeto */
+    liveProjectUrl: "https://fulog-front.vercel.app/" /* link do projeto */
   },
 ];
