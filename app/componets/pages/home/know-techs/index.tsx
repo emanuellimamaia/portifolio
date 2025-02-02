@@ -72,6 +72,14 @@ export const KnowTechs = () => {
             startDate: "2024-6-10",
           }}
         />
+
+        <KnowTech
+          tech={{
+            icon: <TbBrandCss3 />,
+            name: "Paython",
+            startDate: "2023-02-01",
+          }}
+        />
       </div>
     </section>
   );

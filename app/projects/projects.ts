@@ -31,6 +31,11 @@ export const projectsData: Project[] = [
         name: "Docker",
         startDate: "",
       },
+      {
+        icon: '',
+        name: "Python",
+        startDate: "",
+      },
     ],
     pageThumbnail: {
       url: VehicleFulog.src,

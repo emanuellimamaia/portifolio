@@ -62,9 +62,18 @@ export const HeroSection = () => {
             <Techbage name="Sql" />
             <Techbage name="React" />
             <Techbage name="Node.js" />
-            <Techbage name="Nextjs" />
-            <Techbage name="Nestjs" />
+            <Techbage name="Next.js" />
+            <Techbage name="Nest.js" />
             <Techbage name="Docker" />
+            <Techbage name="Python" />
+            <Techbage name="Bun" />
+            <Techbage name="Linux" />
+            <Techbage name="Jest" />
+            <Techbage name="Prisma" />
+            <Techbage name="AWS" />
+            <Techbage name="Fastify" />
+            <Techbage name="Tailwind" />
+            <Techbage name="Express" />
           </div>
 
           {/* parte para entrar em contato */}
