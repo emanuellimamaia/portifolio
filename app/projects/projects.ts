@@ -2,6 +2,7 @@ import { Project } from "../types/project";
 import LoginMobileFulog from '@/public/LoginMobileFulog.png'
 import VehicleFulog from '@/public/VehicleFulog.png'
 import Fulog from '@/public/images/fulog.png'
+import Vocation from '@/public/images/vocation.png'
 export const projectsData: Project[] = [
   {
     slug: "fulog",
@@ -54,5 +55,55 @@ export const projectsData: Project[] = [
     },
     gitHubUrl: "https://github.com/emanuellimamaia/fulog-front",
     liveProjectUrl: "https://fulog-front.vercel.app/" /* link do projeto */
+  },
+  {
+    slug: "Vocacional",
+    thumbnail: {
+      url: Vocation.src,
+    },
+    title: "Vocacional",
+    shortDescription: "Site feito para os vocacionados do Vocacional Shalom 2025",
+    technologies: [
+      {
+        icon: '',
+        name: "Nodejs",
+        startDate: "",
+      },
+
+      {
+        icon: '',
+        name: "NextJs",
+        startDate: "",
+      },
+      {
+        icon: '',
+        name: "PayloadCMS",
+        startDate: "",
+      },
+      {
+        icon: '',
+        name: "Hygraph CMS",
+        startDate: "",
+      },
+
+
+    ],
+    pageThumbnail: {
+      url: Vocation.src,
+    },
+    sections: [
+      {
+        title: "Pagina inicial",
+        image: {
+          url: Vocation.src,
+        },
+      },
+    ],
+    description: {
+      raw: "O Vocacional Shalom é uma proposta da Comunidade Católica Shalom, focada no acompanhamento e discernimento vocacional, ajudando jovens a refletirem sobre o chamado de Deus para suas vidas",
+      text: "",
+    },
+    gitHubUrl: "",
+    liveProjectUrl: "https://comshalom.org/vocacionalshalom/" /* link do projeto */
   },
 ];

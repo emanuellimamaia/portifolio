@@ -41,7 +41,11 @@ export const ProjectDetails = ({ project }: ProjectDetailsProps) => {
         ))}
       </div>
       <div className="my-6 sm:my-12 flex items-center gap-2 sm:gap-4 flex-col sm:flex-row ">
-        <a href={project.gitHubUrl} target="_blank">
+        <a
+          href={project.gitHubUrl}
+          className={`${!project.gitHubUrl && "hidden"}`}
+          target="_blank"
+        >
           <Button className="max-w-[180px]">
             <TbBrandGithub size={20} />
             Repositorio
