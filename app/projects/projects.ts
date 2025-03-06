@@ -54,7 +54,7 @@ export const projectsData: Project[] = [
       text: "",
     },
     gitHubUrl: "https://github.com/emanuellimamaia/fulog-front",
-    liveProjectUrl: "https://fulog-front.vercel.app/" /* link do projeto */
+    liveProjectUrl: "https://fulog-front-git-main-emanuellimamaias-projects.vercel.app/dashboard" /* link do projeto */
   },
   {
     slug: "Vocacional",
