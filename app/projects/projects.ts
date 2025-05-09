@@ -3,6 +3,7 @@ import LoginMobileFulog from '@/public/LoginMobileFulog.png'
 import VehicleFulog from '@/public/VehicleFulog.png'
 import Fulog from '@/public/images/fulog.png'
 import Vocation from '@/public/images/vocation.png'
+import PicSpace from '@/public/images/pic-space.png'
 export const projectsData: Project[] = [
   {
     slug: "fulog",
@@ -105,5 +106,60 @@ export const projectsData: Project[] = [
     },
     gitHubUrl: "",
     liveProjectUrl: "https://comshalom.org/vocacionalshalom/" /* link do projeto */
+  },
+  {
+    slug: "PicSpace",
+    thumbnail: {
+      url: PicSpace.src,
+    },
+    title: "Pic-space",
+    shortDescription: "Um gerenciador de fotos inteligente que usa IA",
+    technologies: [
+      {
+        icon: '',
+        name: "Nodejs",
+        startDate: "",
+      },
+
+      {
+        icon: '',
+        name: "NextJs",
+        startDate: "",
+      },
+      {
+        icon: '',
+        name: "NestJs",
+        startDate: "",
+      },
+      {
+        icon: '',
+        name: "Clarif-AI",
+        startDate: "",
+      },
+      {
+        icon: '',
+        name: "Postgress",
+        startDate: "",
+      },
+
+
+    ],
+    pageThumbnail: {
+      url: PicSpace.src,
+    },
+    sections: [
+      {
+        title: "Pagina inicial",
+        image: {
+          url: PicSpace.src,
+        },
+      },
+    ],
+    description: {
+      raw: "Gerencie suas fotos de maneira inteligente.",
+      text: "A IA ler a suas imagens e adicionar 3 tags que ajuda você a busca ela futuramente.",
+    },
+    gitHubUrl: "https://github.com/emanuellimamaia/picSpace-front",
+    liveProjectUrl: "https://pic-space-front-vde6.vercel.app/" /* link do projeto */
   },
 ];

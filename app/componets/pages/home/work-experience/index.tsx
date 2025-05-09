@@ -32,11 +32,21 @@ export const WorkExperience = () => {
         <ExperienceItem
           tecnologis={["React", "TypeScript", "Node.js"]}
           date="junho de 2024 a janeiro de 2025"
-          company="Grupo Navegam - Treinner"
+          company="Grupo Navegam - Desenvolvedor web"
           imageUrl={navegam}
           programingType="Full-stack"
           skills="Node.js, TypeScript, NestJs, Docker"
           whatWasDone="Desenvolvi soluções inovadoras para preservação da biodiversidade, monitoramento de cadeias produtivas, otimização logística e gestão eficiente, utilizando tecnologias destacadas."
+        />
+
+        <ExperienceItem
+          tecnologis={["PHP", "Laravel", "Node.js", "Nuxt2"]}
+          date="Março de 2025 até o momento"
+          company="Aspen Internacional"
+          imageUrl={navegam}
+          programingType="Full-stack"
+          skills="Nuxt, Laravel, Mysql"
+          whatWasDone="Desenvolvi melhorias e correções em sistemas da área da educação, com foco em aprimorar a experiência dos usuários que utilizam as plataformas dele."
         />
       </div>
     </section>

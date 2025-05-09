@@ -74,6 +74,8 @@ export const HeroSection = () => {
             <Techbage name="Fastify" />
             <Techbage name="Tailwind" />
             <Techbage name="Express" />
+            <Techbage name="PHP" />
+            <Techbage name="Laravel" />
           </div>
 
           {/* parte para entrar em contato */}
